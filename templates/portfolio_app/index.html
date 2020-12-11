@@ -1,36 +1,54 @@
 {% extends 'portfolio_app/base.html' %}
+{% load static %}
 
 {% block content %}
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+
+        <img src="{% static 'img/me.png' %}"
+             alt="avatar mx-auto" class="rounded-circle">
+
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="display-4 font-weight-normal">Welcome to my website!</h1>
-            <p class="lead font-weight-normal">It is a place where I share the things that I can do and I
-                am good at and means to contact me in case you find my profile interesting.</p>
-            <a class="btn btn-outline-secondary" href="#">Send message</a>
+            <p class="lead font-weight-normal">It is a place where I share the things that I know how to do and means
+                to contact me in case you find my profile interesting.</p>
+            <a class="btn btn-outline-secondary" href="{% url 'portfolio_app:contact' %}">Send message</a>
         </div>
         <div class="custom-shape shadow-sm d-none d-md-block"></div>
         <div class="custom-shape-2 shadow-sm d-none d-md-block"></div>
     </div>
 
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-                <h2 class="display-5">Who am I?</h2>
-                <p class="lead">I am a computer software programmer.</p>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6" style="padding-top: 5px;">
+                <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                    <div class="my-3 py-3 my-sm-3 py-sm-3 my-md-3 py-md-3 my-lg-3 py-lg-3" style="height: 120px;">
+                        <h2 class="display-5">Who am I?</h2>
+                        <p class="lead">I am a junior programmer.</p>
+                    </div>
+                    <div class="bg-light shadow-sm mx-auto"
+                         style="width: 95%; height: 150px; border-radius: 21px 21px 0 0;">
+                        <p class="p-2" style="color: #333333; font-size:medium;">I graduated from <a
+                                href="https://usv.ro/">Ștefan cel Mare
+                            University of Suceava</a>, Computer Science field, Bachelor's Degree. I know how to build
+                            a web page from scratch and how to manage the server. I had previously worked as a full
+                            stack developer during the last academic year and several months after.</p>
+                    </div>
+                </div>
             </div>
-            <div class="bg-light shadow-sm mx-auto"
-                 style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <p style="color: #333333">Longer answer to the question</p>
-            </div>
-        </div>
-        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 p-3">
-                <h2 class="display-5">Next things on my plate?</h2>
-                <p class="lead">Right now finding a job and continuing my studies.</p>
-            </div>
-            <div class="bg-light shadow-sm mx-auto"
-                 style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <p style="color: #333333">Longer answer to the question</p>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 " style="padding-top: 5px;">
+                <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                    <div class="my-3 py-3 my-sm-3 py-sm-3 my-md-3 py-md-3 my-lg-3 py-lg-3" style="height: 120px;">
+                        <h2 class="display-5">My current focus?</h2>
+                        <p class="lead">Finding a job and continuing my studies.</p>
+                    </div>
+                    <div class="bg-light shadow-sm mx-auto"
+                         style="width: 95%; height: 150px; border-radius: 21px 21px 0 0;">
+                        <p class="p-2" style="color: #333333; font-size:medium;">Right now I am looking for a job to
+                            begin with the next
+                            year. The programming languages that I like the most are <b>python</b> and <b>java</b>.
+                            I would love an opportunity to broaden my knowledge around the topics that I like.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

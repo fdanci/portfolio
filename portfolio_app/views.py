@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from shared.utils import send_contact_email
+
+from portfolio_app.forms import ContactForm
 
 
 def index(request):
@@ -7,7 +10,7 @@ def index(request):
 
 
 def contact(request):
-    context = {}
+    context = {'form': ContactForm()}
     return render(request, 'portfolio_app/contact.html', context)
 
 
@@ -24,3 +27,12 @@ def hobbies(request):
 def work(request):
     context = {}
     return render(request, 'portfolio_app/work.html', context)
+
+
+def contact_me(request):
+    """Receives contact information and tries to send email."""
+    send_contact_email(request.POST['name'],
+                       request.POST['email'],
+                       request.POST['subject'],
+                       request.POST['message'])
+    return redirect('/contact')
