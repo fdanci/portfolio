@@ -1,4 +1,44 @@
 {% extends 'portfolio_app/base.html' %}
+{% load static %}
+
 {% block content %}
-    <p>about me page</p>
+    <div class="container">
+        <div class="row">
+            <img src="{% static 'img/me.png' %}"
+                 alt="avatar" class="rounded-circle mx-auto p-3">
+        </div>
+        <hr>
+        <div class="col text-center">
+            <p class="lead font-weight-normal">
+                Hello I'm Florin, a college graduate looking for a job.
+                I graduated Ștefan cel Mare University of Suceava, Computer science field, Bachelor's degree.
+                My main focus and interest for now is becoming a professional in the area of software development.
+                Right now I am learning more about APIs and servers. I would love an opportunity where I could gain
+                more knowledge around these concepts.
+            </p>
+        </div>
+        <hr>
+        <div class="col text-center">
+            <p class="lead font-weight-normal">
+                I like challenges and learning new things constantly.
+                During my free time I like to read or listen audiobooks. Occasionally, I also draw and play computer
+                games. I also love exercising frequently. I think it helps the body and the mind and it's awesome
+                to feel and look good.
+            </p>
+        </div>
+        <div class="col text-center" style="margin-top: 10px;">Dogs = Cats</div>
+        <div class="col text-center">Mountains > Beaches</div>
+        <div class="col text-center">Quiet > Noisy</div>
+        <hr>
+        <div class="col text-center">
+            <h1 class="display-5">Objectives</h1>
+            <p class="lead font-weight-normal">
+                Moving to a bigger city, finding a job.
+            </p>
+            <p class="lead font-weight-normal">
+                In the long run, getting a Master's Degree and achieving some personal physical
+                goals.
+            </p>
+        </div>
+    </div>
 {% endblock content %}
