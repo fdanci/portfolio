@@ -193,3 +193,7 @@ hr {
     height: 1px;
     border: 0;
 }
+
+.work-card {
+    margin-bottom: 25px;
+}
