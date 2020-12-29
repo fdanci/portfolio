@@ -5,27 +5,29 @@ from portfolio_app.forms import ContactForm
 
 
 def index(request):
-    context = {}
+    context = {
+        'header': ''
+    }
     return render(request, 'portfolio_app/index.html', context)
 
 
 def contact(request):
-    context = {'form': ContactForm()}
+    context = {'form': ContactForm(), 'header': 'Contact'}
     return render(request, 'portfolio_app/contact.html', context)
 
 
 def about_me(request):
-    context = {}
+    context = {'header': 'About Me'}
     return render(request, 'portfolio_app/about_me.html', context)
 
 
 def hobbies(request):
-    context = {}
+    context = {'header': 'Hobbies'}
     return render(request, 'portfolio_app/hobbies.html', context)
 
 
 def work(request):
-    context = {}
+    context = {'header': 'Work Experience'}
     return render(request, 'portfolio_app/work.html', context)
 
 
