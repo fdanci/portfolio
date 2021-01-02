@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from shared.utils import send_contact_email
 
+from portfolio_app.models import Drawing
+from shared.utils import send_contact_email
 from portfolio_app.forms import ContactForm
 
 
@@ -22,7 +23,12 @@ def about_me(request):
 
 
 def hobbies(request):
-    context = {'header': 'Hobbies'}
+    drawing_urls = [drawing.url for drawing in Drawing.objects.all()]
+    context = {
+        'header': 'Hobbies',
+        'drawings': drawing_urls
+    }
+
     return render(request, 'portfolio_app/hobbies.html', context)
 
 
