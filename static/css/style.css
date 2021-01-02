@@ -201,3 +201,10 @@ hr {
 .work_content {
     margin-top: 20px;
 }
+
+/*
+ * Make font size responsive to screen size.
+ */
+.text-responsive {
+    font-size: calc(100% + 1vw + 1vh);
+}
