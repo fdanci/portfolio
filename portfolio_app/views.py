@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from portfolio_app.models import Drawing
 from shared.utils import send_contact_email
 from portfolio_app.forms import ContactForm
+from django.contrib import messages
 
 
 def index(request):
@@ -43,4 +44,5 @@ def contact_me(request):
                        request.POST['email'],
                        request.POST['subject'],
                        request.POST['message'])
+    messages.success(request, 'Your message was received!')
     return redirect('/contact')
