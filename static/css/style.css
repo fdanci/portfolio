@@ -45,7 +45,7 @@
     bottom: 10%;
     left: 10px;
     color: white;
-    content: "python, java, sql";
+    content: "python, c#, java, sql";
     background-color: rgba(255, 255, 255, .1);
     border-radius: 5px;
 }
@@ -70,7 +70,7 @@
     bottom: 10%;
     left: 10px;
     bottom: 5px;
-    content: "django, gwt";
+    content: "django, gwt, .net";
     background-color: rgba(255, 255, 255, .8);
     border-radius: 5px;
 }
